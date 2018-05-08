@@ -1,0 +1,26 @@
+{
+  "name": "number2words",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./number2words.js",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/node": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "@babel/preset-stage-2": "^7.0.0-beta.46",
+    "jest": "^22.4.3"
+  },
+  "scripts": {
+    "start": "babel-node number2Words",
+    "test": "jest",
+    "eslint": "eslint .",
+    "lint": "yarn run eslint"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      ["@babel/stage-2", { "decoratorsLegacy": true }]
+    ]
+  },
+  "dependencies": {}
+}
