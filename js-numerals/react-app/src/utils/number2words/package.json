@@ -8,7 +8,10 @@
     "@babel/node": "^7.0.0-beta.46",
     "@babel/preset-env": "^7.0.0-beta.46",
     "@babel/preset-stage-2": "^7.0.0-beta.46",
-    "jest": "^22.4.3"
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^22.4.3",
+    "jest": "^22.4.3",
+    "regenerator-runtime": "^0.11.1"
   },
   "scripts": {
     "start": "babel-node number2Words",
@@ -19,7 +22,12 @@
   "babel": {
     "presets": [
       "@babel/preset-env",
-      ["@babel/stage-2", { "decoratorsLegacy": true }]
+      [
+        "@babel/stage-2",
+        {
+          "decoratorsLegacy": true
+        }
+      ]
     ]
   },
   "dependencies": {}

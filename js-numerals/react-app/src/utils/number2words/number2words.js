@@ -1,3 +1,11 @@
+const ranges = {
+  100: 'hundred',
+  1000: 'thousand',
+  1000000: 'million',
+  1000000000: 'billion',
+  1000000000000: 'trillion'
+}
+
 export default class Number2Words {
   static checkNumberSanity = number => {
     const intNumber = parseInt(number)
@@ -12,12 +20,17 @@ export default class Number2Words {
   constructor(number) {
     this.number = null
     this.words = null
-    if (number) this.setNumber(number)
+    if (number !== null && number !== undefined) this.setNumber(number)
   }
 
   convertNumber = () => {
     const { number } = this
-    this.words = `${number}`
+    console.log(number)
+    if (number === 0) {
+      this.words = `zero`
+    } else {
+      this.words = `something`
+    }
   }
 
   setNumber = number => {
