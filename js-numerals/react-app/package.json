@@ -1,7 +1,11 @@
 {
-  "name": "react-app",
+  "name": "js-numerals",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Gergely BORGULYA",
+    "email": "gergely@borgulya.hu"
+  },
   "dependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
