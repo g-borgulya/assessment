@@ -41,10 +41,10 @@ const numberNames = {
 export default class Number2Words {
   static checkNumberSanity = number => {
     // return true if input is a positive integer
-    const intNumber = parseInt(number)
+    const intNumber = parseInt(number, 10)
     if (
       !isNaN(intNumber) &&
-      intNumber === parseFloat(number) &&
+      intNumber === parseFloat(number, 10) &&
       intNumber >= 0
     ) return true
     return false
@@ -59,7 +59,7 @@ export default class Number2Words {
   convertNumber = () => {
     // builds words from this.number and stores it in this.words
     const { number } = this
-    const limits = Object.keys(ranges).map(r => parseInt(r)).sort((a, b) => b - a)
+    const limits = Object.keys(ranges).map(r => parseInt(r, 10)).sort((a, b) => b - a)
     const upperLimit = limits[0] * 1000 - 1
     if (number > upperLimit) {
       throw new Error(`Use a number less than or equal to ${upperLimit}`)
@@ -119,7 +119,7 @@ export default class Number2Words {
           low: ''
         }
         if (tens === 0 && ones === 0) {
-
+          // skip
         } else if (tens < 2) {
           wordfragments.low = numberNames[ones + tens * 10]
         } else if (ones === 0) {
@@ -172,7 +172,7 @@ export default class Number2Words {
     if (!Number2Words.checkNumberSanity(number)) {
       throw new Error('Use a positive integer or zero')
     }
-    this.number = parseInt(number)
+    this.number = parseInt(number, 10)
     this.convertNumber()
     return this.words
   }
