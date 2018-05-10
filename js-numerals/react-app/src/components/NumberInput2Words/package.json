@@ -1,0 +1,6 @@
+{
+  "name": "NumberInput2Words",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./NumberInput2Words.js"
+}
