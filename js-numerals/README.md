@@ -2,31 +2,52 @@
 Javascript/Frontend Programmer - Exercise 1
 =============================
 
-Fork this project with the original description and write your own code. Don't use external library for the conversion.
+Used `create-react-app` for building the dev environment and skeleton of the project.
 
-Commit the important milestones and not just the final result!
+# number converter
 
+The number converter works as a standalone module as well.
 
-Exercise description
---------------------
+Located in `react-app/src/utils/number2words`
 
-Create a frontend application.
+To install / init for command line use:
 
-We need a web form, which has a numeric input field and a submit button.
+```bash
+yarn
+```
 
-When user gives an arabic number, the system shows the english phrase of the number.
+Using from command line:
 
-For example:
-<pre>
-7    == seven
-42   == forty-two
-2001 == two thousand and one
-1999 == nineteen hundred and ninety-nine
-17999 == seventeen thousand nine hundred and ninety-nine
-</pre>
+```bash
+yarn start 101
+```
 
-That's all.
+Testing the module:
 
-Extra points:
+```bash
+yarn test
+```
 
-* write your code in TDD / BDD, use any test frameworks
+# the converter UI
+
+Located in `react-app`
+
+To install / init for command line use:
+
+```bash
+yarn
+```
+
+Starting HMR server in development mode:
+
+```bash
+yarn start
+```
+
+Testing web-app:
+
+```bash
+yarn test
+```
+
+See more details about `create-react-app` in `react-app/README.md`.
